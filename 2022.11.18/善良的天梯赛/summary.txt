@@ -1,0 +1,28 @@
+1.方法较笨，但易想
+2.如下为大佬代码：
+#include<stdio.h>
+int main()
+{
+    int n,i,x=1000000,y=0,t,q,w;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&t);
+        if(t<x)
+        {
+            x=t;
+            w=1;
+        }
+        if(t==x)w++;
+        if(t>y)
+        {
+            y=t;
+            q=1;
+        }
+        if(y==t)q++;
+    }
+    printf("%d %d\n",x,w-1);
+    printf("%d %d",y,q-1);
+    return 0;
+}
+别人未使用数组遍历的方法，在每次输入后与此前规定的最大最小值来判断，q，w来判断次数，666
