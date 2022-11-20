@@ -19,23 +19,23 @@
 //blank = 3, digit = 4, other = 8
 #include<stdio.h>
 int main(){
-	int sum1,sum2,sum3=0;
+	int sum1=0,sum2=0,sum3=0;
 	char n;
 	while(n!='\n'){
 		n = getchar();
 		switch(n){
-			case ' ': case '\n':
-			sum1++;
-			break;
+			case ' ': 
+				sum1++;
+				break;
 			case '0': case '1': case '2': case '3': case '4':
 			case '5': case '6': case '7': case '8': case '9':
-			sum2++;
-			break;
+				sum2++;
+				break;
 			default:
-			sum3++;
-			break;
+				sum3++;
+				break;
 		}
 	}
-	printf("blank = %d, digit = %d, other = %d",sum1,sum2,sum3);
+	printf("blank = %d, digit = %d, other = %d",sum1,sum2,sum3-1);
 	return 0;
 } 
